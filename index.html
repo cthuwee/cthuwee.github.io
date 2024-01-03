@@ -1,1 +1,199 @@
-<h1>Hello World</h1>
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  <script type="text/javascript">
+    (function () {
+      //   emailjs.init("YOUR_PUBLIC_KEY");
+      // emailjs.init("IDVQWSN6cpCQX-5iv");
+      emailjs.init("cerAnuqfJOvYlNdqi");
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/images//favicon.ico" type="image/x-icon">
+  <style>
+    #buy_btn_1OTUVCK9UkRpUcwG0B03qdx7 {
+      background-color: brown;
+    }
+
+    .hero {
+      background-image: url(./images/hero.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-vertical {
+      background-image: url(./images/vertical.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 400px;
+      height: 300px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #bbb;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      width: 40px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-us {
+      background-image: url(./images/contact.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <header class="w-full px-4 py-2">
+    <div class="w-full max-w-[1320px] mx-auto">
+      <nav id="nav">
+      </nav>
+    </div>
+  </header>
+  <!-- hero -->
+  <section class="bg-[#04030F] h-auto w-full px-4 pb-10 md:py-0 text-white">
+    <div class="w-full max-w-[1320px] mx-auto ">
+      <div class="flex flex-col-reverse gap-10 md:flex-row justify-between items-center">
+        <div class="w-full sm:w-3/5 lg:w-2/3 flex flex-col gap-2">
+          <p class="text-4xl font-semibold text-center md:text-left">Origins</p>
+          <br class="text-[20px] leading-[24px]">In the Eons of Aldebaran, the great Cthulhu was struck by loss when his firstborn vanished, taken by the mysterious Shadows of Yog-Sothoth.</br> Fueled by wrath and love, Cthulhu prepared to shake the heavens in search. But first, he entrusted his remaining offspring, the cuddly Cthuwees, into the loving arms of humans.<br> Adopt an adorable Cthuwee today, and share a cosmic bond of love that bridges worlds, as you wait for Cthulhu's triumphant return.</p>
+          <div class="mt-3">
+            <a href="#adopt"
+               class="bg-black px-10 py-3 rounded-md text-black font-semibold bg-gray-100 hover:bg-gray-300 transition-all duration-300">Adopt Now</a>
+          </div>
+        </div>
+        <div class="w-full sm:w-2/5 lg:w-1/3 lg:h-[80vh] flex justify-center sm:justify-end ">
+          <img src="/images/vertical.png" alt="" class="w-full rounded md:w-auto h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Highlight-->
+  <section class="w-full px-4 py-20 bg-gray-100">
+    <div class="w-full max-w-[1320px] mx-auto">
+      <h2 class="text-center text-4xl font-semibold mb-16">Highlights</h2>
+      <div class="w-full flex flex-wrap justify-center items-center md:flex-row md:justify-around md:items-stretch gap-x-5 gap-y-10">
+        <div class="bg-white shadow py-8 px-4 hover:shadow-lg hover:scale-105 transition-all duration-300 rounded-lg flex flex-col justify-center items-center w-[300px] sm:max-w-[340px]">
+          <div class="w-[120px] h-[120px] bg-orange-300 border-[12px] border-orange-200 rounded-full flex justify-center items-center shadow">
+            <img src="./images/icons/adorable.png" alt="" class="w-10 h-10">
+          </div>
+          <h2 class="text-3xl font-semibold text-gray-700 mt-4 mb-2">Adorable & Fun</h2>
+          <p class="text-xl text-center font-medium text-gray-500"> Cthuwees are cute, soft, and fluffy, and fun for adults and children to play with and touch.</p>
+        </div>
+        <div class="bg-white shadow py-8 px-4 hover:shadow-lg hover:scale-105 transition-all duration-300 rounded-lg flex flex-col justify-center items-center w-[300px] sm:max-w-[340px]">
+          <div class="w-[120px] h-[120px] bg-orange-300 border-[12px] border-orange-200 rounded-full flex justify-center items-center shadow">
+            <img src="./images/icons/hand-crafted.png" alt="" class="w-10 h-10">
+          </div>
+          <h2 class="text-3xl font-semibold text-gray-700 mt-4 mb-2">Hand-Crafted</h2>
+          <p class="text-xl text-center font-medium text-gray-500"> All Cthuwee plushies are lovingly hand-crafted in Maryland by the founders of the company</p>
+        </div>
+        <div class="bg-white shadow py-8 px-4 hover:shadow-lg hover:scale-105 transition-all duration-300 rounded-lg flex flex-col justify-center items-center w-[300px] sm:max-w-[340px]">
+          <div class="w-[120px] h-[120px] bg-orange-300 border-[12px] border-orange-200 rounded-full flex justify-center items-center shadow">
+            <img src="./images/icons/collectible.png" alt="" class="w-10 h-10">
+          </div>
+          <h2 class="text-3xl font-semibold text-gray-700 mt-4 mb-2">Collectible</h2>
+          <p class="text-xl text-center font-medium text-gray-500"> Each Cthuwee has a serial number and unique name inspired by the writings of H.P. Lovecraft</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- adopt now / product buy -->
+  <section id="adopt" class="w-full px-4 py-10 ">
+    <div class="w-full max-w-[1320px] mx-auto">
+      <div class="flex flex-col md:flex-row gap-8 justify-between">
+        <div class="md:w-1/2 flex md:justify-center relative">
+          <img id="img" src="/images/products/1.jpeg" alt="black plushies" class="max-w-[100%] object-contain rounded-md ">
+          <div class="absolute left-0 top-[50%] w-full h-[50px] -mt-[25px] flex justify-between px-3">
+            <button id="prev" class="">
+              <img src="/images/icons/angle-left-solid.svg" alt="prev" class="h-10">
+            </button>
+            <button id="next" class="">
+              <img src="/images/icons/angle-right-solid.svg" alt="next" class="h-10">
+            </button>
+          </div>
+          <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
+            <div id="dots" class="flex space-x-2">
+              <!-- Dots will be added dynamically using JavaScript -->
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex flex-col gap-4">
+          <h2 class="text-4xl font-semibold text-center md:text-left">Adopt a Cthuwee</h2>
+          <p class="text-2xl text-center md:text-left">Adopt an adorable Cthuwee today, personalized with a unique name and serial number.</p>
+          <div class="flex gap-y-3 gap-x-5 flex-col items-center md:items-start lg:flex-row">
+            <stripe-buy-button id="buyPink" buy-button-id="buy_btn_1OTUTOK9UkRpUcwGR4RwS0Gd" publishable-key="pk_test_51OTTpHK9UkRpUcwGkgXy6Kx43GEKFcfB7D1HiyDY5V0JGJxyGqxvN3HO99CBsO3b8gNpkgGhjbqiXWLMH9hq4uHA00qLwZnrcD"></stripe-buy-button>
+            <stripe-buy-button buy-button-id="buy_btn_1OTUVCK9UkRpUcwG0B03qdx7" publishable-key="pk_test_51OTTpHK9UkRpUcwGkgXy6Kx43GEKFcfB7D1HiyDY5V0JGJxyGqxvN3HO99CBsO3b8gNpkgGhjbqiXWLMH9hq4uHA00qLwZnrcD"> hello </stripe-buy-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- History -->
+  <section class="w-full px-4 py-10 bg-gray-100">
+    <div class="w-full max-w-[1320px] mx-auto">
+      <h2 class="text-4xl font-bold text-center">History</h2>
+      <p class="my-5 text-lg text-[20px] font-medium">Cthuwee was born in December 2023 just outside Altuna, PA, in a little town called Roaring Spring. Watch the making of the company and its adorable plushies on YouTube.</p>
+      <div class="mx-auto ">
+        <iframe
+                src="https://www.youtube.com/embed/tQTP6uxXmsY"
+                title="Pikmin All Star Collection Plushies - Ice Pikmin and Oatchi SANEI BOEKI Licensed by NINTENDO"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="w-full md:h-[400px] lg:h-[720px] shadow">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <!-- contact us -->
+  <section id="contact-us" class="w-full py-10 pb-20">
+    <div class="max-w-[1320px] mx-auto px-2">
+      <div class="flex flex-col items-center mb-5">
+        <h1 class="text-4xl font-semibold">Contact Us</h1>
+      </div>
+      <div class="mt-[50px] flex flex-col md:flex-row justify-between items-center gap-8 md:gap-16">
+        <div class="w-full flex justify-center md:justify-end contact-">
+          <img src="./images/contact.png" class="w-full max-w-[450px] md:max-w-full h-[300px] sm:h-[400px] md:h-[500px] rounded object-cover" alt="">
+        </div>
+        <div class="w-full max-w-[450px] lg:max-w-[550px]">
+          <form action="" id="contact-form" class="flex flex-col gap-6">
+            <div class="flex flex-col gap-6">
+              <input required type="text" name="name" placeholder="Name..." id="name" class="w-full border border-gray-500 rounded px-3 py-2 focus:outline-none focus:border-blue-500 placeholder-gray-700 text-gray-700">
+              <input required type="email" name="email" placeholder="Email..." id="email" class="w-full border border-gray-500 rounded px-3 py-2 focus:outline-none focus:border-blue-500 placeholder-gray-700 text-gray-700">
+            </div>
+            <div class="flex flex-col gap-2">
+              <textarea name="message" id="message" placeholder="Write your message..." rows="5" class="border border-gray-500 rounded px-3 py-2 focus:outline-none focus:border-blue-500 placeholder-gray-700 text-gray-700 transition-all duration-300"></textarea>
+            </div>
+            <div class="flex">
+              <button type="submit" class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded px-5 py-3 focus:outline-none">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer"></footer>
+  <script src="app.js"></script>
+</body>
+
+</html>

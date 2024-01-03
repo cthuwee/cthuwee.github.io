@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <style>
+    .splash {
+      background-image: url(../images/legal.jpeg);
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <header class="w-full px-4 py-2">
+    <div class="w-full max-w-[1320px] mx-auto">
+      <nav id="nav">
+      </nav>
+    </div>
+  </header>
+  <section class="splash w-full my-2 max-w-[1320px] mx-auto h-[50vh] sm:h-[90vh] max-h-[600px]">
+  </section>
+  <main class="w-full px-4">
+    <div class="w-full max-w-[1320px] mx-auto pb-10">
+      <section class="py-4">
+        <h2 class="text-2xl text-mainBlack font-semibold">Privary Policy</h2>
+        <p class="text-lg mt-2 leading-snug">We value your privacy. Our website collects personal information solely for processing product orders and for notifying you about future product releases. Information collected includes your name, shipping address, email address, and payment details. We implement strict security measures to protect your personal data and do not share it with third parties.</p>
+      </section>
+      <section class="py-4">
+        <h2 class="text-2xl text-mainBlack font-semibold">Terms & Conditions</h2>
+        <p class="text-lg mt-2 leading-snug">By using our website and purchasing Cthuwees, you agree to comply with our Terms & Conditions. You affirm that the information you provide is accurate and that you are authorized to use the payment method provided. You also agree to use our products responsibly and in accordance with local laws.</p>
+      </section>
+      <section class="py-4">
+        <h2 class="text-2xl text-mainBlack font-semibold">Refund Policy</h2>
+        <p class="text-lg mt-2 leading-snug">If your Cthuwee is not as described or is damaged upon arrival, you may request an exchange or a refund within 30 days of purchase. To initiate an exchange or refund, please contact us with your order number and a description of the issue. Please note that refunds are not guaranteed.</p>
+      </section>
+      <section class="py-4">
+        <h2 class="text-2xl text-mainBlack font-semibold">Comment Policy</h2>
+        <p class="text-lg mt-2 leading-snug">We welcome your thoughts and feedback. Comments on our site should be respectful and not infringe on the rights of others. We reserve the right to remove comments that are offensive, defamatory, or out of context with our content.</p>
+      </section>
+      <section class="py-4">
+        <h2 class="text-2xl text-mainBlack font-semibold">Copyright Notice</h2>
+        <p class="text-lg mt-2 leading-snug">All content on this website, including text, graphics, logos, and images of Cthuwees, is the property of Cthuwee and is protected by copyright laws. Unauthorized use is prohibited.</p>
+      </section>
+      <section class="py-4">
+        <h2 class="text-2xl text-mainBlack font-semibold">Disclaimers</h2>
+        <p class="text-lg mt-2 leading-snug">The Cthuwee website and its contents are provided on an "as-is" basis without warranties of any kind. We do not guarantee that the website will be error-free or that the servers hosting the site are free of viruses or other harmful components.</p>
+      </section>
+      <section class="py-4">
+        <h2 class="text-2xl text-mainBlack font-semibold">Trademarks, Patents & Corporate Policies</h2>
+        <p class="text-lg mt-2 leading-snug">"Cthuwee" and related logos are registered trademarks of Cthuwee. Corporate policies on ethical sourcing, sustainability, and employee welfare are available upon request.</p>
+      </section>
+      <section class="py-4">
+        <h2 class="text-2xl text-mainBlack font-semibold">Cookies Policy</h2>
+        <p class="text-lg mt-2 leading-snug">Our website uses cookies to enhance user experience, track shopping cart contents, and analyze traffic patterns. By using our site, you consent to the use of cookies in accordance with our policy.</p>
+      </section>
+      <section class="py-4">
+        <h2 class="text-2xl text-mainBlack font-semibold">Children’s Online Privacy Protection Act (COPPA)</h2>
+        <p class="text-lg mt-2 leading-snug">We comply with COPPA and do not knowingly collect personal information from children under 13. If we learn that we have collected such information, we will take immediate steps to remove it from our systems.</p>
+      </section>
+      <section class="py-4">
+        <h2 class="text-2xl text-mainBlack font-semibold">About Us</h2>
+        <p class="text-lg mt-2 leading-snug">Cthuwee is dedicated to bringing cosmic wonder into your home with our Cthuwee plushies. We are committed to quality, customer satisfaction, and the spirit of cosmic adventure.</p>
+      </section>
+      <p class="text-lg mt-2 leading-snug">For any questions regarding our legal policies, please <a href="/#contact-us" class="hover:underline underline-offset-4">contact us</a></p>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="app.js"></script>
+  <script>
+    const nav = document.getElementById('nav')
+    const footer = document.getElementById('footer')
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        nav.innerHTML = data
+      })
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        footer.innerHTML = data
+      })
+  </script>
+</body>
+
+</html>
