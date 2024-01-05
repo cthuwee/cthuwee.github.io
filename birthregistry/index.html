@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birth Registry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="shortcut icon" href="/images//favicon.ico" type="image/x-icon">
+  <style>
+    .splash {
+      background-image: url(../images/birth-registry.png);
+      background-size: cover;
+      background-position: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid #ddd;
+      margin: 1rem auto;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    th {
+      background-color: #3b82f6;
+      ;
+      color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      th,
+      td {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <header class="w-full px-4 py-2">
+    <div class="w-full max-w-[1320px] mx-auto">
+      <nav id="nav">
+      </nav>
+    </div>
+  </header>
+  <section class="splash w-full my-2 max-w-[1320px] mx-auto h-[50vh] sm:h-[90vh] max-h-[600px]">
+  </section>
+  <!-- main section -->
+  <main class="w-full px-2">
+    <div class="w-full max-w-[1320px] mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-semibold text-center md:text-left my-4 mt-10">Check out the complete list of Cthuwee's. </h2>
+      <table class="table-fixed">
+        <thead>
+          <tr>
+            <th>Serial Number</th>
+            <th>Given Name</th>
+            <th>Color</th>
+            <th>Birth Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Cthuwee 1</td>
+            <td>Pink</td>
+            <td>31 December 2023</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Cthuwee 2</td>
+            <td>Green</td>
+            <td>31 December 2023</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Cthuwee 3</td>
+            <td>Blue</td>
+            <td>31 December 2023</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Cthuwee 4</td>
+            <td>Green</td>
+            <td>31 December 2023</td>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="app.js"></script>
+  <script>
+    const nav = document.getElementById('nav')
+    const footer = document.getElementById('footer')
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        nav.innerHTML = data
+      })
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        footer.innerHTML = data
+      })
+  </script>
+</body>
+
+</html>
