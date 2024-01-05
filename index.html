@@ -7,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+  <title>Cthuwee - Adorable, hand-made, collectible plushes inspired by the works of H.P. Lovecraft</title>
   <script type="text/javascript">
     (function () {
       //   emailjs.init("YOUR_PUBLIC_KEY");
@@ -15,7 +16,7 @@
     })();
   </script>
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="/images//favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
   <style>
     #buy_btn_1OTUVCK9UkRpUcwG0B03qdx7 {
       background-color: brown;
@@ -59,6 +60,37 @@
       width: 100%;
       height: 500px;
     }
+
+    #loading-overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   </style>
 </head>
 
@@ -74,9 +106,13 @@
   <section class="bg-[#0B0D1A] h-auto w-full px-4 pb-10 md:py-0 text-white">
     <div class="w-full max-w-[1320px] mx-auto ">
       <div class="flex flex-col-reverse gap-10 md:flex-row justify-between items-center">
-        <div class="w-full sm:w-3/5 lg:w-2/3 flex flex-col gap-2">
-          <p class="text-4xl font-semibold text-center md:text-left">Origins</p>
-          <br class="text-[20px] leading-[24px]">In the Eons of Aldebaran, the great Cthulhu was struck by loss when his firstborn vanished, taken by the mysterious Shadows of Yog-Sothoth.</br> Fueled by wrath and love, Cthulhu prepared to shake the heavens in search. But first, he entrusted his remaining offspring, the cuddly Cthuwees, into the loving arms of humans.<br> Adopt an adorable Cthuwee today, and share a cosmic bond of love that bridges worlds, as you wait for Cthulhu's triumphant return.</p>
+        <div class="w-full sm:w-3/5 lg:w-2/3 flex flex-col gap-8">
+          <h1 class="text-4xl md:text-[40px] font-semibold text-left">Origins</h1>
+          <div>
+            <p class="text-[20px] md:text-[25px] font-regular leading-snug sm:mt-5"> In the Eons of Aldebaran, the great Cthulhu was struck by loss when his firstborn vanished, taken by the mysterious Shadows of Yog-Sothoth.</p>
+            <p class="text-[20px] md:text-[25px] font-regular leading-snug my-6"> Fueled by wrath and love, Cthulhu prepared to shake the heavens in search. But first, he entrusted his remaining offspring, the cuddly Cthuwees, into the loving arms of humans.</p>
+            <p class="text-[20px] md:text-[25px] font-regular leading-snug">Adopt an adorable Cthuwee today, and share a cosmic bond of love that bridges worlds, as you wait for Cthulhu's triumphant return.</p>
+          </div>
           <div class="mt-3">
             <a href="#adopt"
                class="bg-black px-10 py-3 rounded-md text-black font-semibold bg-gray-100 hover:bg-gray-300 transition-all duration-300">Adopt Now</a>
@@ -84,7 +120,6 @@
         </div>
         <div class="w-full sm:w-2/5 lg:w-1/3 lg:h-[70vh] flex justify-center sm:justify-end ">
           <img src="/images/vertical.png" alt="" class="w-full rounded md:w-auto h-full object-cover">
-          
         </div>
       </div>
     </div>
@@ -124,6 +159,9 @@
       <div class="flex flex-col md:flex-row gap-8 justify-between">
         <div class="md:w-1/2 flex md:justify-center relative">
           <img id="img" src="/images/products/1.jpeg" alt="black plushies" class="max-w-[100%] object-contain rounded-md ">
+          <div id="loading-overlay" class="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+            <div class="loader"></div>
+          </div>
           <div class="absolute left-0 top-[50%] w-full h-[50px] -mt-[25px] flex justify-between px-3">
             <button id="prev" class="">
               <img src="/images/icons/angle-left-solid.svg" alt="prev" class="h-10">
@@ -153,7 +191,7 @@
   <section class="w-full px-4 py-10 bg-gray-100">
     <div class="w-full max-w-[1320px] mx-auto">
       <h2 class="text-4xl font-bold text-center">History</h2>
-      <p class="my-5 text-lg text-[20px] font-medium">Cthuwee was born in December 2023 just outside Altuna, PA, in a little town called Roaring Spring. Watch the making of the company and its adorable plushies on YouTube.</p>
+      <p class="my-5 text-lg text-[20px] font-medium text-center sm:text-left">Cthuwee was born in December 2023 just outside Altuna, PA, in a little town called Roaring Spring. Watch the making of the company and its adorable plushies on YouTube.</p>
       <div class="mx-auto ">
         <iframe
                 src="https://www.youtube.com/embed/tQTP6uxXmsY"
