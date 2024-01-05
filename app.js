@@ -49,6 +49,7 @@ const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const img = document.getElementById('img');
 const dotsContainer = document.getElementById('dots');
+const loadingOverlay = document.getElementById('loading-overlay');
 
 const images = [
   '/images/products/1.jpeg',
@@ -60,7 +61,9 @@ const images = [
 let idx = 0;
 
 function updateCarousel() {
+  showLoading();
   img.src = images[idx];
+  img.onload = hideLoading;
   updateDots();
 }
 
@@ -75,6 +78,14 @@ function updateDots() {
     });
     dotsContainer.appendChild(dot);
   }
+}
+
+function showLoading() {
+  loadingOverlay.style.display = 'flex';
+}
+
+function hideLoading() {
+  loadingOverlay.style.display = 'none';
 }
 
 prevBtn.addEventListener('click', () => {
